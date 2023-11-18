@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh JavaScript dalam HTML</title>
+</head>
+<body>
+
+    <h1>Hallo Semua!</h1>
+
+    <p>Apa kabar</p>
+
+    <button onclick="gantiWarna()">Ganti Warna</button>
+
+    <script>
+        // Fungsi JavaScript untuk mengganti warna teks
+        function gantiWarna() {
+            var warnaBaru = generateRandomColor();
+            document.body.style.color = warnaBaru;
+        }
+
+        // Fungsi JavaScript untuk menghasilkan warna acak
+        function generateRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+</body>
+</html>
